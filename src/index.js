@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Home />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('react-root')
 );
 
 // If you want your app to work offline and load faster, you can change
