@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import "semantic-ui-css/semantic.min.css";
+import "./styles/main.css";
+// import App from './App';
+// import HelloComponent from './component/HelloComponent';
+// import StateFullComponent from './container/StateFullComponent';
+// import Youtube from './component/Youtube/Youtube';
 import * as serviceWorker from './serviceWorker';
+import Home from './container/Home/Home';
 
-ReactDOM.render(
+ReactDOM.render(  
   <React.StrictMode>
-    <App />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );
