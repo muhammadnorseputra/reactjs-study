@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "semantic-ui-css/semantic.min.css";
-import "./styles/main.css";
+// import "./styles/main.css";
 // import App from './App';
 // import HelloComponent from './component/HelloComponent';
 // import StateFullComponent from './container/StateFullComponent';
