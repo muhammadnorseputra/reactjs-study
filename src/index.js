@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { Suspense } from "react";
 import ReactDOM from 'react-dom';
-import "semantic-ui-css/semantic.min.css";
-// import "./styles/main.css";
-// import App from './App';
-// import HelloComponent from './component/HelloComponent';
-// import StateFullComponent from './container/StateFullComponent';
-// import Youtube from './component/Youtube/Youtube';
 import * as serviceWorker from './serviceWorker';
-import Home from './container/Home/Home';
+import "react-perfect-scrollbar/dist/css/styles.css";
+import './components/atoms/FontAwesome';
+import { Loader_intro as Loading } from './components/atoms/Loader'
 
+const Layout = React.lazy(() => import('./containers/template/Layout'));
 ReactDOM.render(  
   <React.StrictMode>
-    <Home />
+    <Suspense fallback={<Loading />}>
+      <Layout />
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('react-root')
 );
