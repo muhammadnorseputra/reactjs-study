@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'MsNormal';
+  src: local('Microsoft New Tai Lue'),
+    url(../fonts/ntailu.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'MsBold';
+  src: local('Microsoft New Tai Lue'),
+    url(../fonts/ntailub.ttf) format('ttf');
+}
+
