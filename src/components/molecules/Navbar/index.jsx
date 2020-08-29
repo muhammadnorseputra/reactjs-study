@@ -33,7 +33,7 @@ function Navbar() {
           <i className="fas fa-bars"></i>
         </div>
         <div className="flex flex-row-reverse mr-8 hidden md:flex">
-        <Tippy interactive={true} animateFill={true} plugins={animateFill} animation="shift-away" content="Open console to manage this app on browser" arrow={false}>
+        <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Open console to manage this app on browser" arrow={false}>
           <button className="text-gray-800 text-center bg-gray-200 px-4 py-2 m-2 rounded-lg text-sm hover:bg-gray-400">
             Open Console
           </button>

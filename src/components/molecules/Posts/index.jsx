@@ -4,6 +4,7 @@ import Img from "react-image-appear";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 export default class Post extends Component {
   
   componentDidMount() {
