@@ -1,50 +1,57 @@
-import React, { Component, Fragment } from 'react'
-import ReactImageAppear from "react-image-appear";
+import React, { Fragment, useState, useEffect } from 'react'
+import { Tabs } from '@bumaga/tabs' 
+import { _back } from '../../../components/atoms/Button/_back'
+import { _tab, _panel } from '../../../components/atoms/Button/_tab'
 
-export default class Office extends Component {
-  render() {
+export const Office = () => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    setIndex(1)
+  }, [])
+
     return (
       <Fragment>
-        <header className="p-3 border-b border-gray sticky top-0 w-inline bg-white font-ms font-bold text-xl">
+        <header className="p-1 z-30 sticky top-0 font-bold text-xl">
+          <_back />
           Office
         </header>
         <div>
           <div className="">
-            <div className="h-64 overflow-hidden">
-              <ReactImageAppear
-                src="https://3.bp.blogspot.com/-Chu20FDi9Ek/WoOD-ehQ29I/AAAAAAAAK7U/mc4CAiTYOY8VzOFzBKdR52aLRiyjqu0MwCLcBGAs/s1600/DSC04596%2B%25282%2529.JPG"
-                className="w-full z-0"
+            <div className="h-auto overflow-hidden border-t">
+              <img
+                src="https://scontent.fbdj2-1.fna.fbcdn.net/v/t1.0-9/106995197_111440770632899_3912732846559373341_o.jpg?_nc_cat=104&_nc_sid=e3f864&_nc_eui2=AeHOUwQ2HOtBRafimS9kv2dzr-Z4vt9rZ0mv5ni-32tnSWvLB3bIy5WERDDBHc5hK8ARIfBFMSgw5374b1RqSZWr&_nc_ohc=bKovj6vxBzIAX9IGth2&_nc_ht=scontent.fbdj2-1.fna&oh=f40295cd53fab4af09fc48c2a83c0542&oe=5F6F7FDD"
+                className="w-full z-0 bg-no-repeat bg-center"
                 alt="cover-profile"
               />
             </div>
-            <div className="flex justify-start -mt-8">
+            <div className="flex justify-start">
+              <div className="rounded-full border-solid border-white border-4 w-32 h-32 z-10 -mt-16 ml-5 overflow-hidden">
               <img
-                src="https://avatars0.githubusercontent.com/u/38799309?v=4"
-                className="rounded-full border-solid border-white border-4 w-40 z-10 -mt-8 ml-5"
+                src="https://scontent.fbdj2-1.fna.fbcdn.net/v/t1.0-9/85071418_106611221115854_331630689688841953_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_eui2=AeF3Ay6vM1378fukOqJNMJwFVMOMZvM_F0RUw4xm8z8XRLxvyfOQBbMti7uiTqtJYIE_9g2n8ofCsjOoyLNVYKJ8&_nc_ohc=5N4uVCqPMQAAX_fRc1Q&_nc_ht=scontent.fbdj2-1.fna&oh=418d8cb04bc8580031543d45e04d0f1c&oe=5F6E3F1A"
                 alt="profile-pic"
               />
+              </div>
             </div>
             <div className="text-left px-8 pb-6 pt-2">
-              <h3 className="text-black text-xl font-bold font-ms">
+              <h3 className="text-black text-xl font-bold">
                 Badan Kepegawaian, Pendidikan dan Pelatihan Daerah
               </h3>
               <p className="mt-2 font-sans font-light text-grey-dark">
                 Hello, i'm from another the other side!
               </p>
             </div>
-            <div className="flex justify-center pb-3 text-grey-dark">
-              <div className="text-center mr-3 border-r pr-3">
-                <h2>34</h2>
-                <span>Photos</span>
-              </div>
-              <div className="text-center">
-                <h2>42</h2>
-                <span>Friends</span>
-              </div>
+            <Tabs state={[index, setIndex]}>
+            <div className="bg-white border-b-2">
+              <nav className="flex justify-around sm:flex-row">
+                <_tab title="Visi & Misi"/>
+                <_tab title="Struktur Oraganisasi" />
+              </nav>
             </div>
+                <_panel component="test Visi" />
+                <_panel component="test Struktur" />
+            </Tabs> 
           </div>
         </div>
       </Fragment>
     );
-  }
 }

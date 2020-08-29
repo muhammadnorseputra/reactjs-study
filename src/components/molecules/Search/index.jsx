@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-
+import StickyBox from "react-sticky-box";
 export default class Post extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="p-3 bg-white flex justify-start items-center">
+      <StickyBox
+              bottom={false}
+              offsetTop={50}
+              offsetBottom={0}
+              className="z-10"
+            >
+        <div className="py-3 bg-white flex justify-start items-center">
           <input
             type="search"
             name="search"
             id="search"
             placeholder="Search"
-            className="p-3 ml-2 rounded-full w-1/2 h-10 appearance-none outline-none focus:bg-white focus:shadow focus:text-green-400 bg-gray-300 transition-shadow duration-300 ease-in-out"
+            className="p-3 rounded-full w-full h-10 appearance-none outline-none focus:bg-white focus:shadow-xs focus:text-gray-800 bg-gray-300 transition-shadow duration-300 ease-in-out"
           />
           <button
             type="submit"
@@ -26,6 +32,7 @@ export default class Post extends Component {
             </svg>
           </button>
         </div>
+            </StickyBox>
       </React.Fragment>
     );
   }

@@ -1,30 +1,36 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
+import { Tabs } from '@bumaga/tabs' 
+import { _back } from '../../../components/atoms/Button/_back'
+import { _tab, _panel } from '../../../components/atoms/Button/_tab'
 
-
-export default class Office extends Component {
-  render() {
+export const Explore = () => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    setIndex(1)
+  }, [])
     return (
       <Fragment>
-        <header className="p-3 border-b border-gray sticky top-0 w-inline bg-white font-ms font-bold text-xl">
+        <header className="p-1 z-30 sticky top-0 font-bold text-xl">
+          <_back />
           Explore
         </header>
-        <div className="bg-white border-b-2 font-ms">
+        <Tabs state={[index, setIndex]}>
+        <div className="bg-white border-b-2 border-t">
           <nav className="flex justify-around sm:flex-row">
-            <button className="text-gray-600 py-4 px-6 block hover:bg-blue-100 hover:text-blue-500 focus:outline-none text-blue-500 border-b-2 font-bold border-blue-500 w-full">
-              Lastest
-            </button>
-            <button className="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none w-full hover:bg-blue-100 hover:text-blue-500 font-bold">
-              Photos
-            </button>
-            <button className="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none w-full hover:bg-blue-100 hover:text-blue-500 font-bold">
-              Videos
-            </button>
-            <button className="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none w-full hover:bg-blue-100 hover:text-blue-500 font-bold">
-              Files
-            </button>
+          <_tab title="Lastest"/>
+          <_tab title="Tags"/>
+          <_tab title="Photos"/>
+          <_tab title="Videos"/>
+          <_tab title="Files"/>
           </nav>
         </div>
+
+        <_panel component="test 1" />
+        <_panel component="test 2" />
+        <_panel component="test 3" />
+        <_panel component="test 4" />
+        <_panel component="test 5" />
+        </Tabs>
       </Fragment>
     );
-  }
 }

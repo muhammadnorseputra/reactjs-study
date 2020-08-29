@@ -1,17 +1,27 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Img from "react-image-appear";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default class Post extends Component {
+  
+  componentDidMount() {
+    AOS.init({
+      offset: 100,
+      once: true
+    });
+  }
+
   render() {
     const { Sumber, SumberId, TglPublish, ImgUrl, Title, Description } = this.props
     return (
       <React.Fragment>
-        <div className="w-full border-b bg-white mx-3 md:mx-0 lg:mx-0 hover:bg-gray-100">
-          <div className=" sticky top-0 w-full flex justify-between p-3 bg-white z-10">
-            <div className="flex">
+        <div className="w-full border-b bg-white mx-3 md:mx-0 lg:mx-0 hover:bg-gray-100" data-aos="fade-up">
+          <div className="sticky top-0 w-full flex justify-between p-3 bg-white z-10">
+            <div className="flex z-0" data-aos="fade-up" data-aos-delay="100">
               <div className="rounded-full h-8 w-8 bg-green-500 flex items-center justify-center overflow-hidden">
-                <Img
+                <img
                   src="https://avatars0.githubusercontent.com/u/38799309?v=4"
                   alt="profilepic"
                 />
@@ -24,11 +34,11 @@ export default class Post extends Component {
                 {TglPublish}
               </span>
             </div>
-            <span className="px-2 hover:bg-gray-300 cursor-pointer rounded">
-              <i className="fas fa-ellipsis-h pt-2 text-lg"></i>
-            </span>
+            <button className="p-2 flex items-center justify-center hover:bg-gray-300 cursor-pointer rounded">
+              <FontAwesomeIcon icon={["fas", "ellipsis-h"]} />
+            </button>
           </div>
-          <div className="p-3 relative">
+          <div className="p-3 relative z-10">
             <Img
               className="w-full bg-cover rounded-lg"
               src={ImgUrl}
@@ -74,7 +84,7 @@ export default class Post extends Component {
               </div>
             </div>
             <div className="mt-5 mx-6">
-              <p className="text-2xl font-bold font-ms">{Title}</p>
+              <p className="text-2xl font-bold">{Title}</p>
               <div className="mb-2 text-medium">{Description}</div>
             </div>
             <div className="font-sm flex justify-start item-center mx-6">

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bumaga/tabs": "^0.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
@@ -11,16 +12,22 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@tippyjs/react": "^4.1.0",
     "aos": "^2.3.4",
     "axios": "^0.20.0",
+    "firebase": "^7.19.1",
+    "light-toast": "^0.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-image-appear": "^1.3.26",
-    "react-loadingg": "^1.7.2",
     "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-sticky-box": "^0.9.3"
+    "react-skylight": "^0.5.1",
+    "react-spinners": "^0.9.0",
+    "react-spring": "^8.0.27",
+    "react-sticky-box": "^0.9.3",
+    "toasted-notes": "^3.2.0"
   },
   "scripts": {
     "start": "npm run build:css && react-scripts start",

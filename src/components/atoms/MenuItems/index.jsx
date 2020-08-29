@@ -12,7 +12,7 @@ const MenuItem = (props) => {
         to={props.path}
         activeClassName="text-green-400"
       >
-        <span className="group-hover:bg-green-100 group-hover:text-green-400 py-3 pr-8 pl-4 rounded-full font-ms text-lg font-bold transition-color duration-300 ease-in-out">
+        <span className="group-hover:bg-green-100 group-hover:text-green-400 py-3 pr-8 pl-4 rounded-full text-lg font-bold transition-color duration-300 ease-in-out">
           <FontAwesomeIcon
             className="md:mr-5"
             size="lg"

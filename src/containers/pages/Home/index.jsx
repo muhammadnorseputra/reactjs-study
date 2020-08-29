@@ -1,36 +1,49 @@
-import React, { Component, Fragment, Suspense } from 'react'
+import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import { Loader_content as Loading } from "../../../components/atoms/Loader";
-const Post = React.lazy(() => import('../../../components/molecules/Posts'));
+import Post from '../../../components/molecules/Posts';
+import { LoseConnection } from '../../../components/atoms/Error/LoseConnection'
+import { GlobalConsumer } from '../../../config/Context' 
 
 const ApiKey = "f6eb574228534232b71febf5ccdb441b";
 const Contry = "id";
 
-export default class Home extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      isLoading: true,
       posts: []
     }
   }
   componentDidMount() {
-    axios.get(
-      `https://newsapi.org/v2/top-headlines?country=${Contry}&apiKey=${ApiKey}`
-    ).then(res => {
-      this.setState({
-        posts: res.data.articles,
-      });
-    });
+    return new Promise ((resolve, reject)  => { 
+      axios.get(`https://newsapi.org/v2/top-headlines?country=${Contry}&apiKey=${ApiKey}`)
+      .then(res => {
+        this.setState({
+          posts: res.data.articles,
+          isLoading: false,
+        });
+        this.props.dispatch({type: 'ONLINE'});
+      }).catch(reject => {
+        this.setState({
+          isLoading: false,
+        })
+        this.props.dispatch({type: 'OFFLINE'});
+      })
+    }) 
+        
   }
 
   render() {
     const article = this.state.posts;
+    const loading = this.state.isLoading;
     return (
       <Fragment>
-        <header className="p-3 border-b border-gray sticky top-0 z-0 bg-white font-ms font-bold text-xl">
-          Home
+        <header className="p-3 border-b z-30 sticky top-0 font-bold text-xl">
+          Home 
         </header>
-        <Suspense fallback={<Loading />}>
+          
           {article.map((post, index) => (
             <Post
               key={index}
@@ -42,8 +55,18 @@ export default class Home extends Component {
               Description={post.description}
             />
           ))}
-        </Suspense>
+
+          { !loading && !this.props.state.connection
+            ? 
+            <LoseConnection />
+            : 
+            <Loading isLoading={loading} />
+          }
+          
       </Fragment>
     );
   }
 }
+
+
+export default GlobalConsumer(Home);

@@ -1,18 +1,25 @@
 import React from 'react'
-import { BoxLoading, LoopCircleLoading } from "react-loadingg";
+import logo from '../../../assets/img/logo/logo.png'
+import { MoonLoader } from 'react-spinners';
 
 export const Loader_intro = () => {
   return (
-    <div className="flex justify-center items-center">
-      <BoxLoading speed="1" />
-    </div>
+    <React.Fragment>
+    <center>
+      <img src={logo} alt="Logo Balangan" className="p-2"/>
+    </center>
+    </React.Fragment>
   );
 }
 
-export const Loader_content = () => {
+export const Loader_content = (props) => {
   return (
-    <div className="flex justify-center items-center">
-      <LoopCircleLoading size="small"/>
-    </div>
+      <div className="flex justify-center items-center w-full h-screen">
+      <MoonLoader
+          color={'#123abc'} 
+          loading={props.isLoading} 
+          size={30}
+        />
+      </div>
   );
 };

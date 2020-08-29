@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Switch, Route } from "react-router-dom"
 import Home from "../../pages/Home"
 import Cpns from "../../pages/Cpns";
-import Explore from "../../pages/Explore";
-import Office from "../../pages/Office";
+import { Explore } from "../../pages/Explore";
+import { Office } from "../../pages/Office";
 import Notification from "../../pages/Notification";
 
 
