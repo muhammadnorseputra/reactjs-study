@@ -3,7 +3,6 @@ import MenuItem from '../../atoms/MenuItems';
 import StickyBox from "react-sticky-box";
 import SkyLight from 'react-skylight';
 import imgLogin from '../../../assets/img/svg/undraw_secure_login_pdn4.svg'
-import Toast from 'light-toast';
 
 class Menu extends React.Component {
   render() {
@@ -51,7 +50,7 @@ class Menu extends React.Component {
     />
   </div>
   <div className="w-full xl:w-1/2 p-8">
-    <form method="post" action="#" onSubmit="return false">
+    <form>
       <h1 className=" text-2xl font-bold">Sign in to your account</h1>
       <div>
         <span className="text-gray-600 text-sm">

@@ -1,11 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NoConection from '../../../assets/img/error/no-internet.png'
-import { useHistory } from "react-router-dom";
 
 export const LoseConnection = () => {
-	
-	const history = useHistory();
+
 	const handleReload= () => {
 		window.location.reload(false)
 	}

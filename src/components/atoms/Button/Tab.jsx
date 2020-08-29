@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useTabState, usePanelState } from '@bumaga/tabs' 
 const cn = (...args) => args.filter(Boolean).join(' ');
 
@@ -18,13 +18,13 @@ const Panel = ({ children }) => {
   return isActive ? <p>{children}</p> : null;
 };
 
-export const _tab = ({title}) => {
+export const MyTab = ({title}) => {
 	return(
 		<Tab>{title}</Tab>
 		)
 }
 
-export const _panel = ({component}) => {
+export const MyPanel = ({component}) => {
 	return(
 			<Panel>
 				{component}

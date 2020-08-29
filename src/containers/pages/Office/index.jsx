@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { Tabs } from '@bumaga/tabs' 
-import { _back } from '../../../components/atoms/Button/_back'
-import { _tab, _panel } from '../../../components/atoms/Button/_tab'
+import { Back } from '../../../components/atoms/Button/Back'
+import { MyTab, MyPanel } from '../../../components/atoms/Button/Tab'
 
 export const Office = () => {
   const [index, setIndex] = useState(0);
@@ -12,7 +12,7 @@ export const Office = () => {
     return (
       <Fragment>
         <header className="p-1 z-30 sticky top-0 font-bold text-xl">
-          <_back />
+          <Back />
           Office
         </header>
         <div>
@@ -43,12 +43,12 @@ export const Office = () => {
             <Tabs state={[index, setIndex]}>
             <div className="bg-white border-b-2">
               <nav className="flex justify-around sm:flex-row">
-                <_tab title="Visi & Misi"/>
-                <_tab title="Struktur Oraganisasi" />
+                <MyTab title="Visi & Misi"/>
+                <MyTab title="Struktur Oraganisasi" />
               </nav>
             </div>
-                <_panel component="test Visi" />
-                <_panel component="test Struktur" />
+                <MyPanel component="test Visi" />
+                <MyPanel component="test Struktur" />
             </Tabs> 
           </div>
         </div>
