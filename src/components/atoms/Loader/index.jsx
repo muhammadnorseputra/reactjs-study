@@ -14,7 +14,7 @@ export const Loader_intro = () => {
 
 export const Loader_content = (props) => {
   return (
-      <div className="flex justify-center items-center w-full h-screen">
+      <div className="flex justify-center items-center w-full h-screen bg-white shadow">
       <MoonLoader
           color={'#123abc'} 
           loading={props.isLoading} 

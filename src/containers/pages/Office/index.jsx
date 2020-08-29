@@ -11,16 +11,16 @@ export const Office = () => {
 
     return (
       <Fragment>
-        <header className="p-1 z-30 sticky top-0 font-bold text-xl">
+        <header className="py-2 px-1 mb-1 z-30 sticky top-0 font-bold text-xl">
           <Back />
           Office
         </header>
         <div>
-          <div className="">
+          <div className="bg-white rounded-t-lg shadow">
             <div className="h-auto overflow-hidden border-t">
               <img
                 src="https://scontent.fbdj2-1.fna.fbcdn.net/v/t1.0-9/106995197_111440770632899_3912732846559373341_o.jpg?_nc_cat=104&_nc_sid=e3f864&_nc_eui2=AeHOUwQ2HOtBRafimS9kv2dzr-Z4vt9rZ0mv5ni-32tnSWvLB3bIy5WERDDBHc5hK8ARIfBFMSgw5374b1RqSZWr&_nc_ohc=bKovj6vxBzIAX9IGth2&_nc_ht=scontent.fbdj2-1.fna&oh=f40295cd53fab4af09fc48c2a83c0542&oe=5F6F7FDD"
-                className="w-full z-0 bg-no-repeat bg-center"
+                className="w-full z-0 bg-no-repeat bg-center rounded-t-lg"
                 alt="cover-profile"
               />
             </div>

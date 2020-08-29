@@ -40,7 +40,7 @@ class Home extends Component {
     const loading = this.state.isLoading;
     return (
       <Fragment>
-        <header className="p-3 border-b z-30 sticky top-0 font-bold text-xl">
+        <header className="p-3 bg-gray-100 font-bold text-xl">
           Home 
         </header>
           

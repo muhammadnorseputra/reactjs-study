@@ -18,7 +18,7 @@ export default class Post extends Component {
     const { Sumber, SumberId, TglPublish, ImgUrl, Title, Description } = this.props
     return (
       <React.Fragment>
-        <div className="w-full border-b bg-white mx-3 md:mx-0 lg:mx-0 hover:bg-gray-100" data-aos="fade-up">
+        <div className="w-full border-b bg-white mx-3 md:mx-0 lg:mx-0 hover:bg-gray-100 shadow" data-aos="fade-up">
           <div className="sticky top-0 w-full flex justify-between p-3 bg-white z-10">
             <div className="flex z-0" data-aos="fade-up" data-aos-delay="100">
               <div className="rounded-full h-8 w-8 bg-green-500 flex items-center justify-center overflow-hidden">

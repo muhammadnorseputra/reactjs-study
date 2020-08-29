@@ -18,7 +18,7 @@ class Layout extends React.Component {
           <div className="w-2/6 pl-10">
               <Menu />
           </div>
-          <div className="w-4/6 border-l border-r border-b border-gray">
+          <div className="w-4/6">
             <Content />
           </div>
           <div className="w-2/6 pr-10">

@@ -6,11 +6,11 @@ export default class Post extends Component {
       <React.Fragment>
       <StickyBox
               bottom={false}
-              offsetTop={50}
+              offsetTop={55}
               offsetBottom={0}
               className="z-10"
             >
-        <div className="py-3 bg-white flex justify-start items-center">
+        <div className="py-3 bg-trasparent flex justify-start items-center">
           <input
             type="search"
             name="search"

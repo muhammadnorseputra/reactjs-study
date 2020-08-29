@@ -20,7 +20,7 @@ function Navbar() {
               offsetBottom={0}
               className="z-20"
             >
-      <div className="w-full flex flex-row gap-6 items-center justify-between bg-white border-b">
+      <div className="w-full flex flex-row gap-6 items-center justify-between bg-white shadow">
         <div className="ml-10 pl-5 text-lg font-bold text-gray-900 hidden md:flex">
           BKPPD Balangan
         </div>
