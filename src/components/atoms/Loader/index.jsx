@@ -6,12 +6,8 @@ export const Loader_intro = () => {
   return (
     <React.Fragment>
     <div style={{height: '95vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-{/*      <img src={logo} alt="Logo Balangan" style={{width: '90px'}}/>
-*/}      <MoonLoader
-          color={'#123abc'} 
-          loading={true} 
-          size={20}
-        />
+      <img src={logo} alt="Logo Balangan" style={{width: '80px'}}/>
+      
     </div>
     </React.Fragment>
   );

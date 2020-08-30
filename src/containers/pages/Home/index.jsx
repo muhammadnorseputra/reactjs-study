@@ -44,29 +44,29 @@ class Home extends Component {
     return (
       <Fragment>
         <div className="flex flex-row justify-center gap-6">
-          <div class="w-16 h-16 relative my-4">
+          <div className="w-16 h-16 relative my-4">
             <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
             </div>
             </Tippy>
           </div>
-          <div class="w-16 h-16 relative my-4">
+          <div className="w-16 h-16 relative my-4">
             <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
             </div>
             </Tippy>
-          </div>          <div class="w-16 h-16 relative my-4">
+          </div>          <div className="w-16 h-16 relative my-4">
             <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
             </div>
             </Tippy>
-          </div>          <div class="w-16 h-16 relative my-4">
+          </div>          <div className="w-16 h-16 relative my-4">
             <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
             </div>
             </Tippy>
           </div>
