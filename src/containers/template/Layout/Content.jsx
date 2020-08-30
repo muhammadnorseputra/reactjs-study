@@ -5,6 +5,7 @@ import Cpns from "../../pages/Cpns";
 import { Explore } from "../../pages/Explore";
 import { Office } from "../../pages/Office";
 import Notification from "../../pages/Notification";
+import NotMatch from "../../pages/NotMatch";
 
 
 export default class Content extends Component {
@@ -12,21 +13,12 @@ export default class Content extends Component {
   render() {
     return (
         <Switch>
-          <Route path="/cpns">
-            <Cpns />
-          </Route>
-          <Route path="/explore">
-            <Explore />
-          </Route>
-          <Route path="/notification">
-            <Notification />
-          </Route>
-          <Route path="/office">
-            <Office />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/cpns" component={ Cpns } />
+          <Route path="/explore" component={ Explore } />
+          <Route path="/notification" component={ Notification } />
+          <Route path="/office" component={ Office } />
+          <Route exact path="/" component={ Home } />
+          <Route component={ NotMatch } />
         </Switch>
     );
   }

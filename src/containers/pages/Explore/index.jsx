@@ -10,12 +10,12 @@ export const Explore = () => {
   }, [])
     return (
       <Fragment>
-        <header className="p-1 z-30 sticky top-0 font-bold text-xl">
+        <header className="p-1 my-2 z-30 sticky top-0 font-bold text-xl">
           <Back />
           Explore
         </header>
         <Tabs state={[index, setIndex]}>
-        <div className="bg-white border-b-2 border-t">
+        <div className="bg-white p-2 rounded-lg shadow">
           <nav className="flex justify-around sm:flex-row">
           <MyTab title="Lastest"/>
           <MyTab title="Tags"/>

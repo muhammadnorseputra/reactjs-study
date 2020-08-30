@@ -5,6 +5,9 @@ import Post from '../../../components/molecules/Posts';
 import { LoseConnection } from '../../../components/atoms/Error/LoseConnection'
 import { GlobalConsumer } from '../../../config/Context' 
 
+import Tippy from '@tippyjs/react';
+import {animateFill} from 'tippy.js';
+
 const ApiKey = "f6eb574228534232b71febf5ccdb441b";
 const Contry = "id";
 
@@ -40,8 +43,36 @@ class Home extends Component {
     const loading = this.state.isLoading;
     return (
       <Fragment>
-        <header className="p-3 bg-gray-100 font-bold text-xl">
-          Home 
+        <div className="flex flex-row justify-center gap-6">
+          <div class="w-16 h-16 relative my-4">
+            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
+            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            </div>
+            </Tippy>
+          </div>
+          <div class="w-16 h-16 relative my-4">
+            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
+            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            </div>
+            </Tippy>
+          </div>          <div class="w-16 h-16 relative my-4">
+            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
+            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            </div>
+            </Tippy>
+          </div>          <div class="w-16 h-16 relative my-4">
+            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
+            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+            </div>
+            </Tippy>
+          </div>
+        </div>
+        <header className="p-3 bg-white rounded-t-lg font-bold text-xl shadow">
+          New Post 
         </header>
           
           {article.map((post, index) => (

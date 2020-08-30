@@ -20,8 +20,8 @@ function Navbar() {
               offsetBottom={0}
               className="z-20"
             >
-      <div className="w-full flex flex-row gap-6 items-center justify-between bg-white shadow">
-        <div className="ml-10 pl-5 text-lg font-bold text-gray-900 hidden md:flex">
+      <div className="w-full flex flex-row items-center justify-between bg-white shadow">
+        <div className="ml-10 text-lg font-bold text-gray-900 hidden md:flex">
           BKPPD Balangan
         </div>
         
@@ -34,7 +34,7 @@ function Navbar() {
         </div>
         <div className="flex flex-row-reverse mr-8 hidden md:flex">
         <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Open console to manage this app on browser" arrow={false}>
-          <button className="text-gray-800 text-center bg-gray-200 px-4 py-2 m-2 rounded-lg text-sm hover:bg-gray-400">
+          <button onClick={() => window.location.href='https://firebase.google.com/?hl=id'} className="text-gray-800 text-center bg-gray-200 px-4 py-2 m-2 rounded-lg text-sm hover:bg-gray-400">
             Open Console
           </button>
         </Tippy>

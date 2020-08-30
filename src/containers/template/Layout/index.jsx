@@ -15,20 +15,20 @@ class Layout extends React.Component {
       <React.Fragment>
         <Navbar />
         <div className="flex flex-row gap-0 space-x-8">
-          <div className="w-2/6 pl-10">
-              <Menu />
+          <div className="w-2/6 pl-5">
+            <Menu />
           </div>
           <div className="w-4/6">
             <Content />
           </div>
           <div className="w-2/6 pr-10">
-              <Search />
-              <Sidebar />
+            <Search />
+            <Sidebar />
           </div>
         </div>
       </React.Fragment>
     </Router>
-    )
+  );
   }
 }
 

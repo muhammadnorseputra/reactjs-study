@@ -14,12 +14,12 @@ class Menu extends React.Component {
       boxShadow: 'none'
     }
     const modalOverlay = {
-      backgroundColor: 'rgba(255,255,255,0.8)'
+      backgroundColor: 'rgba(0,0,0,0.3)'
     }
     const modalCloseBtn = {
-      right: '0px',
+      right: '30px',
       fontSize: '2em',
-      top: '-40px'
+      top: '-10px'
     }
   return (
     <React.Fragment>
@@ -34,14 +34,14 @@ class Menu extends React.Component {
         </ul>
       </nav>
       <div className="mt-5 flex justify-center">
-        <button onClick={() => this.simpleDialog.show()} className="bg-green-400 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full block">
+        <button onClick={() => this.simpleDialog.show()} className="bg-green-400 hover:bg-green-600 text-white w-full font-bold py-3 px-8 rounded-full block">
           Registartion / Login
         </button>
       </div>
       </StickyBox>
       <SkyLight dialogStyles={modalStyle} overlayStyles={modalOverlay} closeButtonStyle={modalCloseBtn} hideOnOverlayClicked ref={ref => this.simpleDialog = ref}>
         <div
-  className="container max-w-md mx-auto xl:max-w-3xl h-full flex bg-white rounded-lg shadow-lg border border-4"
+  className="container max-w-md mx-auto xl:max-w-3xl h-full flex bg-green-100 rounded-csm shadow-xl border border-4"
 >
   <div className="flex justify-center items-center hidden xl:block xl:w-1/2 h-100 my-8">
     <img
@@ -68,10 +68,11 @@ class Menu extends React.Component {
           Email
         </label>
         <input
-          className="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-200 leading-tight focus:outline-none focus:shadow-outline h-10"
+          className="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-200 leading-tight border-2 border-gray-300 focus:outline-none focus:border-green-300 h-10"
           id="email"
           type="text"
-          placeholder="Your email address"
+                  placeholder="Your email address"
+                  autoComplete="false"
         />
       </div>
       <div className="mb-6 mt-6">
@@ -82,7 +83,7 @@ class Menu extends React.Component {
           Password
         </label>
         <input
-          className="text-sm bg-gray-200 appearance-none rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-10"
+          className="text-sm bg-gray-200 appearance-none rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight border-2 border-gray-300 focus:outline-none focus:border-green-300 h-10"
           id="password"
           type="password"
           placeholder="Your password"

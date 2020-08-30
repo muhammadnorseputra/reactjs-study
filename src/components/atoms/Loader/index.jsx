@@ -1,13 +1,18 @@
 import React from 'react'
-import logo from '../../../assets/img/logo/logo.png'
+import logo from '../../../assets/img/logo/logo-big.png'
 import { MoonLoader } from 'react-spinners';
 
 export const Loader_intro = () => {
   return (
     <React.Fragment>
-    <center>
-      <img src={logo} alt="Logo Balangan" className="p-2"/>
-    </center>
+    <div style={{height: '95vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+{/*      <img src={logo} alt="Logo Balangan" style={{width: '90px'}}/>
+*/}      <MoonLoader
+          color={'#123abc'} 
+          loading={true} 
+          size={20}
+        />
+    </div>
     </React.Fragment>
   );
 }

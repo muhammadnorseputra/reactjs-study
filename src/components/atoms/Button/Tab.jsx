@@ -6,7 +6,7 @@ const Tab = ({ children }) => {
   const { isActive, onClick } = useTabState()
 
   return (
-    <button className={cn('text-gray-600 py-4 px-6 block hover:bg-green-100 hover:text-green-500 focus:outline-none font-bold w-full', isActive && 'text-green-600 py-4 px-6 block hover:bg-green-100 hover:text-green-500 focus:outline-none font-bold w-full')} onClick={onClick}>
+    <button className={cn('text-gray-600 py-3 block hover:bg-green-100 hover:text-green-300 focus:outline-none font-bold w-full transition-color duration-100 rounded-lg', isActive && 'text-green-300 py-3 block hover:bg-green-100 hover:text-green-300 focus:outline-none font-bold w-full border-green-600')} onClick={onClick}>
       {children}
     </button>
   )

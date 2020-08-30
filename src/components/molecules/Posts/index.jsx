@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Img from "react-image-appear";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -18,13 +17,14 @@ export default class Post extends Component {
     const { Sumber, SumberId, TglPublish, ImgUrl, Title, Description } = this.props
     return (
       <React.Fragment>
-        <div className="w-full border-b bg-white mx-3 md:mx-0 lg:mx-0 hover:bg-gray-100 shadow" data-aos="fade-up">
+        <div className="w-full cursor-pointer border-b bg-white mx-3 md:mx-0 lg:mx-0 hover:bg-gray-100 shadow">
           <div className="sticky top-0 w-full flex justify-between p-3 bg-white z-10">
             <div className="flex z-0" data-aos="fade-up" data-aos-delay="100">
               <div className="rounded-full h-8 w-8 bg-green-500 flex items-center justify-center overflow-hidden">
                 <img
                   src="https://avatars0.githubusercontent.com/u/38799309?v=4"
                   alt="profilepic"
+                  data-aos="fade-up"
                 />
               </div>
               <span className="pt-1 ml-2 font-bold text-sm">{Sumber}</span>
@@ -35,13 +35,16 @@ export default class Post extends Component {
                 {TglPublish}
               </span>
             </div>
-            <button className="p-2 flex items-center justify-center hover:bg-gray-300 cursor-pointer rounded">
+            <button
+              data-aos="fade-up"
+              className="p-2 flex items-center justify-center hover:bg-gray-200 cursor-pointer rounded"
+            >
               <FontAwesomeIcon icon={["fas", "ellipsis-h"]} />
             </button>
           </div>
-          <div className="p-3 relative z-10">
-            <Img
-              className="w-full bg-cover rounded-lg"
+          <div className="p-3 relative z-10 overflow-hidden">
+            <img
+              className="w-full bg-cover rounded-lg border-1 border-gray-200"
               src={ImgUrl}
               alt="React Cool Img"
             />
