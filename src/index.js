@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import "react-perfect-scrollbar/dist/css/styles.css";
@@ -7,7 +7,7 @@ import 'toasted-notes/src/styles.css';
 import 'tippy.js/dist/tippy.css'; // optional
 import { Loader_intro as Loading } from './components/atoms/Loader'
 
-const Layout = React.lazy(() => import('./containers/template/Layout'));
+const Layout = lazy(() => import('./containers/template/Layout'));
 ReactDOM.render(  
   <React.StrictMode>
     <Suspense fallback={<Loading />}>
