@@ -10,6 +10,7 @@
   src: local('Microsoft New Tai Lue'),
     url(../fonts/ntailub.ttf) format('ttf');
 }
+
 body {
 	background: #edf2f7;
 }

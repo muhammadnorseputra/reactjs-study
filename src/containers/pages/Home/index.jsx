@@ -71,7 +71,7 @@ class Home extends Component {
             </Tippy>
           </div>
         </div>
-        <header className="p-3 bg-white rounded-t-lg font-bold text-xl shadow">
+        <header className="p-3 bg-white rounded-lg font-bold text-xl shadow">
           New Post 
         </header>
           

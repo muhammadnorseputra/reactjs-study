@@ -2,7 +2,8 @@ import React from "react";
 import StickyBox from "react-sticky-box";
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SimpleImg } from 'react-simple-img';
+import ImgSuspense from 'img-suspense';
+import { Loader_content as Loading } from '../../../components/atoms/Loader'
 
 const Sidebar = () => {
   return (
@@ -138,8 +139,8 @@ const Sidebar = () => {
         <div className="flow-root overflow-hidden rounded-csm bg-gray-400 mt-5">
           <div className="flex justify-around flex-wrap flex-row">
             <div className="flax-1 cursor-pointer bg-green-200 w-1/2">
-              <SimpleImg
-              
+              <ImgSuspense
+                fallback={<Loading />}
                 placeholder="linear-gradient(rgb(30, 87, 153) 0%, rgb(125, 185, 232) 100%)"
                 src="https://images.unsplash.com/photo-1511268594014-0e9d3ea5c33e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
                 alt="a"
@@ -147,8 +148,8 @@ const Sidebar = () => {
               />
             </div>
             <div className="flax-1 cursor-pointer bg-green-200 w-1/2">
-              <SimpleImg
-              
+              <ImgSuspense
+                fallback={<Loading />}
                 placeholder="linear-gradient(rgb(30, 87, 153) 0%, rgb(125, 185, 232) 100%)"
                 src="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
                 alt="b"
@@ -156,8 +157,8 @@ const Sidebar = () => {
               />
             </div>
             <div className="flax-1 cursor-pointer bg-green-200 w-1/2">
-              <SimpleImg
-              
+              <ImgSuspense
+                fallback={<Loading />}
                 placeholder="linear-gradient(rgb(30, 87, 153) 0%, rgb(125, 185, 232) 100%)"
                 src="https://images.unsplash.com/photo-1598442633140-6a931ed7587b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                 alt="c"
@@ -165,8 +166,8 @@ const Sidebar = () => {
               />
             </div>
             <div className="flax-1 cursor-pointer bg-green-200 w-1/2">
-              <SimpleImg
-              
+              <ImgSuspense
+                fallback={<Loading />}
                 placeholder="linear-gradient(rgb(30, 87, 153) 0%, rgb(125, 185, 232) 100%)"
                 src="https://images.unsplash.com/photo-1595931712126-e01d8712314b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                 alt="d"
@@ -174,8 +175,8 @@ const Sidebar = () => {
               />
             </div>
             <div className="flax-1 cursor-pointer bg-green-200 w-1/2">
-              <SimpleImg
-              
+              <ImgSuspense
+                fallback={<Loading />}
                 placeholder="linear-gradient(rgb(30, 87, 153) 0%, rgb(125, 185, 232) 100%)"
                 src="https://images.unsplash.com/photo-1592961169004-b6f2c0ec63bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
                 alt="e"
@@ -183,8 +184,8 @@ const Sidebar = () => {
               />
             </div>
             <div className="flax-1 cursor-pointer bg-green-200 w-1/2">
-              <SimpleImg
-              
+              <ImgSuspense
+                fallback={<Loading />}
                 placeholder="linear-gradient(rgb(30, 87, 153) 0%, rgb(125, 185, 232) 100%)"
                 src="https://images.unsplash.com/photo-1595931474671-aacb00377e46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
                 alt="f"

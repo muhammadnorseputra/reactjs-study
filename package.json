@@ -16,6 +16,7 @@
     "aos": "^2.3.4",
     "axios": "^0.20.0",
     "firebase": "^7.19.1",
+    "img-suspense": "0.0.2-beta-5",
     "light-toast": "^0.3.0",
     "react": "^16.13.1",
     "react-awesome-popover": "^6.1.1",

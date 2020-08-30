@@ -5,9 +5,8 @@ import { MoonLoader } from 'react-spinners';
 export const Loader_intro = () => {
   return (
     <React.Fragment>
-    <div style={{height: '95vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <div style={{height: '100vh', top: '0', left: '0', width: '100%', position: 'absolute', backgroundColor: '#edf2f7', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <img src={logo} alt="Logo Balangan" style={{width: '80px'}}/>
-      
     </div>
     </React.Fragment>
   );
