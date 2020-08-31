@@ -21,7 +21,7 @@ class Layout extends React.Component {
           <div className="w-4/6">
             <Content />
           </div>
-          <div className="w-2/6 pr-10">
+          <div className="w-3/6 pr-10">
             <Search />
             <Sidebar />
           </div>

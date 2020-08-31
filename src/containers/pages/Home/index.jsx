@@ -5,9 +5,6 @@ import Post from '../../../components/molecules/Posts';
 import { LoseConnection } from '../../../components/atoms/Error/LoseConnection'
 import { GlobalConsumer } from '../../../config/Context' 
 
-import Tippy from '@tippyjs/react';
-import {animateFill} from 'tippy.js';
-
 const ApiKey = "f6eb574228534232b71febf5ccdb441b";
 const Contry = "id";
 
@@ -20,14 +17,14 @@ class Home extends Component {
     }
   }
   componentDidMount() {
-    axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-    
     return new Promise ((resolve, reject)  => { 
       axios.get(`https://newsapi.org/v2/top-headlines?country=${Contry}&apiKey=${ApiKey}`)
       .then(res => {
+        localStorage.setItem('api_articles', JSON.stringify(res.data.articles))
+        let dataGetStorage = localStorage.getItem('api_articles');
+        // console.log('dataApi', dataGetStorage);
         this.setState({
-          posts: res.data.articles,
+          posts: JSON.parse(dataGetStorage),
           isLoading: false,
         });
         this.props.dispatch({type: 'ONLINE'});
@@ -46,35 +43,7 @@ class Home extends Component {
     const loading = this.state.isLoading;
     return (
       <Fragment>
-        <div className="flex flex-row justify-center gap-6">
-          <div className="w-16 h-16 relative my-4">
-            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
-            </div>
-            </Tippy>
-          </div>
-          <div className="w-16 h-16 relative my-4">
-            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
-            </div>
-            </Tippy>
-          </div>          <div className="w-16 h-16 relative my-4">
-            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
-            </div>
-            </Tippy>
-          </div>          <div className="w-16 h-16 relative my-4">
-            <Tippy interactive={false} animateFill={true} plugins={animateFill} animation="shift-away" content="Putra" arrow={false}>
-            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
-              <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="lovely avatar" className="object-cover object-center w-full h-full visible group-hover:hidden" />
-            </div>
-            </Tippy>
-          </div>
-        </div>
-        <header className="p-3 bg-white rounded-lg font-bold text-xl shadow">
+        <header className="p-3 bg-white my-3 rounded-lg font-bold text-xl shadow">
           New Post 
         </header>
           
@@ -94,7 +63,7 @@ class Home extends Component {
             ? 
             <LoseConnection />
             : 
-            <Loading isLoading={loading} />
+            <Loading isLoading={loading} sizeLoading={30} height="100px" />
           }
           
       </Fragment>

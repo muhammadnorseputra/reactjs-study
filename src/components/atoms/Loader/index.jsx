@@ -14,12 +14,20 @@ export const Loader_intro = () => {
 
 export const Loader_content = (props) => {
   return (
-      <div className="flex justify-center items-center w-full h-screen bg-white shadow">
+    <React.Fragment>
+      <div className="flex justify-center items-center w-full rounded-lg" style={{height: props.height, backgroundColor: props.bgColorLoading}}>
       <MoonLoader
           color={'#123abc'} 
           loading={props.isLoading} 
-          size={30}
+          size={props.sizeLoading}
         />
       </div>
+    </React.Fragment>
   );
 };
+
+Loader_content.defaultProps = {
+  sizeLoading: 30,
+  height: '100vh',
+  bgColorLoading: 'trasparent'
+}

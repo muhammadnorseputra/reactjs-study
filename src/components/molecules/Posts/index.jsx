@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ImgSuspense from 'img-suspense';
-import { Loader_content as Loading } from '../../../components/atoms/Loader'
-
 
 export default class Post extends Component {
   
@@ -19,12 +16,11 @@ export default class Post extends Component {
     const { Sumber, SumberId, TglPublish, ImgUrl, Title, Description } = this.props
     return (
       <React.Fragment>
-        <div className="w-full cursor-pointer border-b bg-white mx-3 md:mx-0 my-3 rounded-lg lg:mx-0 hover:bg-gray-100 shadow">
+        <div className="w-full cursor-pointer border-b bg-white mx-3 md:mx-0 my-5 rounded-lg lg:mx-0 hover:bg-gray-100 shadow" data-aos="fade-up" data-aos-delay="100">
           <div className="sticky top-0 w-full flex justify-between p-3 bg-white z-10 rounded-t-lg">
             <div className="flex z-0">
               <div className="rounded-full h-8 w-8 bg-green-500 flex items-center justify-center overflow-hidden">
-                <ImgSuspense
-                  fallback={<Loading />}
+                <img
                   src="https://avatars0.githubusercontent.com/u/38799309?v=4"
                   alt="profilepic"
                 />
@@ -44,8 +40,7 @@ export default class Post extends Component {
             </button>
           </div>
           <div className="p-3 relative z-10 overflow-hidden">
-            <ImgSuspense
-              fallback={<Loading />}
+            <img
               className="w-full bg-cover rounded-lg border-1 border-gray-200"
               src={ImgUrl}
               alt="React Cool Img"
